@@ -1,0 +1,17 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+	{
+		"key": "shift+alt+f",
+		"command": "editor.action.format"
+	},
+	{
+		"key": "shift+alt+cmd+7",
+		"command": "gitlens.showCommitSearch",
+		"when": "gitlens:enabled"
+	},
+	{
+		"key": "shift+alt+7",
+		"command": "-gitlens.showCommitSearch",
+		"when": "gitlens:enabled"
+	}
+]

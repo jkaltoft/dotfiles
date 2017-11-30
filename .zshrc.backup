@@ -1,0 +1,10 @@
+
+###-tns-completion-start-###
+if [ -f /Users/jesper.k.vind/.tnsrc ]; then 
+    source /Users/jesper.k.vind/.tnsrc 
+fi
+###-tns-completion-end-###
+
+[ -s "/Users/jesper.k.vind/.dnx/dnvm/dnvm.sh" ] && . "/Users/jesper.k.vind/.dnx/dnvm/dnvm.sh" # Load dnvm
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

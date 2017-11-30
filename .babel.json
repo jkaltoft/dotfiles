@@ -1,0 +1,368 @@
+{
+  "{\"filename\":\"/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/start.js\",\"extra\":{},\"env\":{},\"retainLines\":false,\"nonStandard\":true,\"experimental\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"stage\":0,\"blacklist\":[],\"optional\":[],\"modules\":\"common\",\"moduleIds\":false,\"jsxPragma\":\"React.createElement\",\"plugins\":[],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"keepModuleIdExtensions\":false,\"auxiliaryCommentAfter\":\"\",\"externalHelpers\":false,\"metadataUsedHelpers\":false,\"breakConfig\":false,\"sourceType\":\"module\"}:5.8.34": {
+    "metadata": {
+      "modules": {
+        "imports": [
+          {
+            "source": "browser-sync",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "browserSync"
+              }
+            ]
+          },
+          {
+            "source": "webpack",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpack"
+              }
+            ]
+          },
+          {
+            "source": "hygienist-middleware",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "hygienistMiddleware"
+              }
+            ]
+          },
+          {
+            "source": "webpack-dev-middleware",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpackDevMiddleware"
+              }
+            ]
+          },
+          {
+            "source": "webpack-hot-middleware",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpackHotMiddleware"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      },
+      "usedHelpers": [
+        "interop-require-default"
+      ]
+    },
+    "ignored": false,
+    "code": "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n'use strict';\n\nObject.defineProperty(exports, '__esModule', {\n  value: true\n});\n\nvar _this = this;\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }\n\nvar _browserSync = require('browser-sync');\n\nvar _browserSync2 = _interopRequireDefault(_browserSync);\n\nvar _webpack = require('webpack');\n\nvar _webpack2 = _interopRequireDefault(_webpack);\n\nvar _hygienistMiddleware = require('hygienist-middleware');\n\nvar _hygienistMiddleware2 = _interopRequireDefault(_hygienistMiddleware);\n\nvar _webpackDevMiddleware = require('webpack-dev-middleware');\n\nvar _webpackDevMiddleware2 = _interopRequireDefault(_webpackDevMiddleware);\n\nvar _webpackHotMiddleware = require('webpack-hot-middleware');\n\nvar _webpackHotMiddleware2 = _interopRequireDefault(_webpackHotMiddleware);\n\nglobal.watch = true;\nvar webpackConfig = require('./webpack.config')[0];\nvar bundler = (0, _webpack2['default'])(webpackConfig);\n\nexports['default'] = function callee$0$0() {\n  return regeneratorRuntime.async(function callee$0$0$(context$1$0) {\n    while (1) switch (context$1$0.prev = context$1$0.next) {\n      case 0:\n        context$1$0.next = 2;\n        return regeneratorRuntime.awrap(require('./build')());\n\n      case 2:\n\n        (0, _browserSync2['default'])({\n          server: {\n            baseDir: 'build',\n\n            middleware: [(0, _hygienistMiddleware2['default'])('build'), (0, _webpackDevMiddleware2['default'])(bundler, {\n              // IMPORTANT: dev middleware can't access config, so we should\n              // provide publicPath by ourselves\n              publicPath: webpackConfig.output.publicPath,\n\n              // pretty colored output\n              stats: webpackConfig.stats\n\n            }), // for other settings see\n            // http://webpack.github.io/docs/webpack-dev-middleware.html\n\n            // bundler should be the same as above\n            (0, _webpackHotMiddleware2['default'])(bundler)]\n          },\n\n          // no need to watch '*.js' here, webpack will take care of it for us,\n          // including full page reloads if HMR won't work\n          files: ['build/**/*.css', 'build/**/*.html']\n        });\n\n      case 3:\n      case 'end':\n        return context$1$0.stop();\n    }\n  }, null, _this);\n};\n\nmodule.exports = exports['default'];\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZXNwZXIuay52aW5kL3Byb2plY3RzL3BsYXlncm91bmQvcmVhY3Rqcy9yZWFjdC1zdGF0aWMvdG9vbHMvc3RhcnQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OzsyQkFNd0IsY0FBYzs7Ozt1QkFDbEIsU0FBUzs7OzttQ0FDRyxzQkFBc0I7Ozs7b0NBQ3JCLHdCQUF3Qjs7OztvQ0FDeEIsd0JBQXdCOzs7O0FBRXpELE1BQU0sQ0FBQyxLQUFLLEdBQUcsSUFBSSxDQUFDO0FBQ3BCLElBQU0sYUFBYSxHQUFHLE9BQU8sQ0FBQyxrQkFBa0IsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO0FBQ3JELElBQU0sT0FBTyxHQUFHLDBCQUFRLGFBQWEsQ0FBQyxDQUFDOztxQkFFeEI7Ozs7O3dDQUNQLE9BQU8sQ0FBQyxTQUFTLENBQUMsRUFBRTs7OztBQUUxQixzQ0FBWTtBQUNWLGdCQUFNLEVBQUU7QUFDTixtQkFBTyxFQUFFLE9BQU87O0FBRWhCLHNCQUFVLEVBQUUsQ0FDVixzQ0FBb0IsT0FBTyxDQUFDLEVBRTVCLHVDQUFxQixPQUFPLEVBQUU7OztBQUc1Qix3QkFBVSxFQUFFLGFBQWEsQ0FBQyxNQUFNLENBQUMsVUFBVTs7O0FBRzNDLG1CQUFLLEVBQUUsYUFBYSxDQUFDLEtBQUs7O2FBSTNCLENBQUM7Ozs7QUFHRixtREFBcUIsT0FBTyxDQUFDLENBQzlCO1dBQ0Y7Ozs7QUFJRCxlQUFLLEVBQUUsQ0FDTCxnQkFBZ0IsRUFDaEIsaUJBQWlCLENBQ2xCO1NBQ0YsQ0FBQyxDQUFDOzs7Ozs7O0NBQ0oiLCJmaWxlIjoiL1VzZXJzL2plc3Blci5rLnZpbmQvcHJvamVjdHMvcGxheWdyb3VuZC9yZWFjdGpzL3JlYWN0LXN0YXRpYy90b29scy9zdGFydC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogUmVhY3QgU3RhdGljIEJvaWxlcnBsYXRlXG4gKiBodHRwczovL2dpdGh1Yi5jb20va29pc3R5YS9yZWFjdC1zdGF0aWMtYm9pbGVycGxhdGVcbiAqIENvcHlyaWdodCAoYykgS29uc3RhbnRpbiBUYXJrdXMgKEBrb2lzdHlhKSB8IE1JVCBsaWNlbnNlXG4gKi9cblxuaW1wb3J0IGJyb3dzZXJTeW5jIGZyb20gJ2Jyb3dzZXItc3luYyc7XG5pbXBvcnQgd2VicGFjayBmcm9tICd3ZWJwYWNrJztcbmltcG9ydCBoeWdpZW5pc3RNaWRkbGV3YXJlIGZyb20gJ2h5Z2llbmlzdC1taWRkbGV3YXJlJztcbmltcG9ydCB3ZWJwYWNrRGV2TWlkZGxld2FyZSBmcm9tICd3ZWJwYWNrLWRldi1taWRkbGV3YXJlJztcbmltcG9ydCB3ZWJwYWNrSG90TWlkZGxld2FyZSBmcm9tICd3ZWJwYWNrLWhvdC1taWRkbGV3YXJlJztcblxuZ2xvYmFsLndhdGNoID0gdHJ1ZTtcbmNvbnN0IHdlYnBhY2tDb25maWcgPSByZXF1aXJlKCcuL3dlYnBhY2suY29uZmlnJylbMF07XG5jb25zdCBidW5kbGVyID0gd2VicGFjayh3ZWJwYWNrQ29uZmlnKTtcblxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgKCkgPT4ge1xuICBhd2FpdCByZXF1aXJlKCcuL2J1aWxkJykoKTtcblxuICBicm93c2VyU3luYyh7XG4gICAgc2VydmVyOiB7XG4gICAgICBiYXNlRGlyOiAnYnVpbGQnLFxuXG4gICAgICBtaWRkbGV3YXJlOiBbXG4gICAgICAgIGh5Z2llbmlzdE1pZGRsZXdhcmUoJ2J1aWxkJyksXG5cbiAgICAgICAgd2VicGFja0Rldk1pZGRsZXdhcmUoYnVuZGxlciwge1xuICAgICAgICAgIC8vIElNUE9SVEFOVDogZGV2IG1pZGRsZXdhcmUgY2FuJ3QgYWNjZXNzIGNvbmZpZywgc28gd2Ugc2hvdWxkXG4gICAgICAgICAgLy8gcHJvdmlkZSBwdWJsaWNQYXRoIGJ5IG91cnNlbHZlc1xuICAgICAgICAgIHB1YmxpY1BhdGg6IHdlYnBhY2tDb25maWcub3V0cHV0LnB1YmxpY1BhdGgsXG5cbiAgICAgICAgICAvLyBwcmV0dHkgY29sb3JlZCBvdXRwdXRcbiAgICAgICAgICBzdGF0czogd2VicGFja0NvbmZpZy5zdGF0cyxcblxuICAgICAgICAgIC8vIGZvciBvdGhlciBzZXR0aW5ncyBzZWVcbiAgICAgICAgICAvLyBodHRwOi8vd2VicGFjay5naXRodWIuaW8vZG9jcy93ZWJwYWNrLWRldi1taWRkbGV3YXJlLmh0bWxcbiAgICAgICAgfSksXG5cbiAgICAgICAgLy8gYnVuZGxlciBzaG91bGQgYmUgdGhlIHNhbWUgYXMgYWJvdmVcbiAgICAgICAgd2VicGFja0hvdE1pZGRsZXdhcmUoYnVuZGxlciksXG4gICAgICBdLFxuICAgIH0sXG5cbiAgICAvLyBubyBuZWVkIHRvIHdhdGNoICcqLmpzJyBoZXJlLCB3ZWJwYWNrIHdpbGwgdGFrZSBjYXJlIG9mIGl0IGZvciB1cyxcbiAgICAvLyBpbmNsdWRpbmcgZnVsbCBwYWdlIHJlbG9hZHMgaWYgSE1SIHdvbid0IHdvcmtcbiAgICBmaWxlczogW1xuICAgICAgJ2J1aWxkLyoqLyouY3NzJyxcbiAgICAgICdidWlsZC8qKi8qLmh0bWwnLFxuICAgIF0sXG4gIH0pO1xufTtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/start.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;;;2BAMwB,cAAc;;;;uBAClB,SAAS;;;;mCACG,sBAAsB;;;;oCACrB,wBAAwB;;;;oCACxB,wBAAwB;;;;AAEzD,MAAM,CAAC,KAAK,GAAG,IAAI,CAAC;AACpB,IAAM,aAAa,GAAG,OAAO,CAAC,kBAAkB,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,IAAM,OAAO,GAAG,0BAAQ,aAAa,CAAC,CAAC;;qBAExB;;;;;wCACP,OAAO,CAAC,SAAS,CAAC,EAAE;;;;AAE1B,sCAAY;AACV,gBAAM,EAAE;AACN,mBAAO,EAAE,OAAO;;AAEhB,sBAAU,EAAE,CACV,sCAAoB,OAAO,CAAC,EAE5B,uCAAqB,OAAO,EAAE;;;AAG5B,wBAAU,EAAE,aAAa,CAAC,MAAM,CAAC,UAAU;;;AAG3C,mBAAK,EAAE,aAAa,CAAC,KAAK;;aAI3B,CAAC;;;;AAGF,mDAAqB,OAAO,CAAC,CAC9B;WACF;;;;AAID,eAAK,EAAE,CACL,gBAAgB,EAChB,iBAAiB,CAClB;SACF,CAAC,CAAC;;;;;;;CACJ",
+      "file": "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/start.js",
+      "sourcesContent": [
+        "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\nimport browserSync from 'browser-sync';\nimport webpack from 'webpack';\nimport hygienistMiddleware from 'hygienist-middleware';\nimport webpackDevMiddleware from 'webpack-dev-middleware';\nimport webpackHotMiddleware from 'webpack-hot-middleware';\n\nglobal.watch = true;\nconst webpackConfig = require('./webpack.config')[0];\nconst bundler = webpack(webpackConfig);\n\nexport default async () => {\n  await require('./build')();\n\n  browserSync({\n    server: {\n      baseDir: 'build',\n\n      middleware: [\n        hygienistMiddleware('build'),\n\n        webpackDevMiddleware(bundler, {\n          // IMPORTANT: dev middleware can't access config, so we should\n          // provide publicPath by ourselves\n          publicPath: webpackConfig.output.publicPath,\n\n          // pretty colored output\n          stats: webpackConfig.stats,\n\n          // for other settings see\n          // http://webpack.github.io/docs/webpack-dev-middleware.html\n        }),\n\n        // bundler should be the same as above\n        webpackHotMiddleware(bundler),\n      ],\n    },\n\n    // no need to watch '*.js' here, webpack will take care of it for us,\n    // including full page reloads if HMR won't work\n    files: [\n      'build/**/*.css',\n      'build/**/*.html',\n    ],\n  });\n};\n"
+      ]
+    },
+    "mtime": 1451222772000
+  },
+  "{\"filename\":\"/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/webpack.config.js\",\"extra\":{},\"env\":{},\"retainLines\":false,\"nonStandard\":true,\"experimental\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"stage\":0,\"blacklist\":[],\"optional\":[],\"modules\":\"common\",\"moduleIds\":false,\"jsxPragma\":\"React.createElement\",\"plugins\":[],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"keepModuleIdExtensions\":false,\"auxiliaryCommentAfter\":\"\",\"externalHelpers\":false,\"metadataUsedHelpers\":false,\"breakConfig\":false,\"sourceType\":\"module\"}:5.8.34": {
+    "metadata": {
+      "modules": {
+        "imports": [
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "webpack",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "webpack"
+              }
+            ]
+          },
+          {
+            "source": "lodash.merge",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "merge"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      },
+      "usedHelpers": [
+        "to-consumable-array",
+        "interop-require-default"
+      ]
+    },
+    "ignored": false,
+    "code": "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n'use strict';\n\nObject.defineProperty(exports, '__esModule', {\n  value: true\n});\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _webpack = require('webpack');\n\nvar _webpack2 = _interopRequireDefault(_webpack);\n\nvar _lodashMerge = require('lodash.merge');\n\nvar _lodashMerge2 = _interopRequireDefault(_lodashMerge);\n\nvar DEBUG = !process.argv.includes('release');\nvar VERBOSE = process.argv.includes('verbose');\nvar WATCH = global.watch;\nvar AUTOPREFIXER_BROWSERS = ['Android 2.3', 'Android >= 4', 'Chrome >= 35', 'Firefox >= 31', 'Explorer >= 9', 'iOS >= 7', 'Opera >= 12', 'Safari >= 7.1'];\nvar JS_LOADER = {\n  test: /\\.jsx?$/,\n  include: [_path2['default'].resolve(__dirname, '../components'), _path2['default'].resolve(__dirname, '../core'), _path2['default'].resolve(__dirname, '../pages'), _path2['default'].resolve(__dirname, '../app.js'), _path2['default'].resolve(__dirname, '../config.js')],\n  loader: 'babel-loader'\n};\n\n// Base configuration\nvar config = {\n  output: {\n    path: _path2['default'].join(__dirname, '../build'),\n    publicPath: '/',\n    sourcePrefix: '  '\n  },\n  cache: false,\n  debug: DEBUG,\n  stats: {\n    colors: true,\n    reasons: DEBUG,\n    hash: VERBOSE,\n    version: VERBOSE,\n    timings: true,\n    chunks: VERBOSE,\n    chunkModules: VERBOSE,\n    cached: VERBOSE,\n    cachedAssets: VERBOSE\n  },\n  plugins: [new _webpack2['default'].optimize.OccurenceOrderPlugin(), new _webpack2['default'].DefinePlugin({\n    'process.env.NODE_ENV': DEBUG ? '\"development\"' : '\"production\"',\n    '__DEV__': DEBUG\n  })],\n  module: {\n    loaders: [{\n      test: /[\\\\\\/]app\\.js$/,\n      loader: _path2['default'].join(__dirname, './lib/routes-loader.js')\n    }, {\n      test: /\\.json$/,\n      loader: 'json-loader'\n    }, {\n      test: /\\.txt$/,\n      loader: 'raw-loader'\n    }, {\n      test: /\\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,\n      loader: 'url-loader?limit=10000'\n    }, {\n      test: /\\.(eot|ttf|wav|mp3)$/,\n      loader: 'file-loader'\n    }]\n  },\n  postcss: function plugins(bundler) {\n    return [require('postcss-import')({ addDependencyTo: bundler }), require('precss')(), require('autoprefixer')({\n      browsers: AUTOPREFIXER_BROWSERS\n    })];\n  }\n};\n\n// Configuration for the client-side bundle\nvar appConfig = (0, _lodashMerge2['default'])({}, config, {\n  entry: [].concat(_toConsumableArray(WATCH ? ['webpack-hot-middleware/client'] : []), ['./app.js']),\n  output: {\n    filename: 'app.js'\n  },\n  // http://webpack.github.io/docs/configuration.html#devtool\n  devtool: DEBUG ? 'cheap-module-eval-source-map' : false,\n  plugins: [].concat(_toConsumableArray(config.plugins), _toConsumableArray(DEBUG ? [] : [new _webpack2['default'].optimize.DedupePlugin(), new _webpack2['default'].optimize.UglifyJsPlugin({\n    compress: {\n      warnings: VERBOSE\n    }\n  }), new _webpack2['default'].optimize.AggressiveMergingPlugin()]), _toConsumableArray(WATCH ? [new _webpack2['default'].HotModuleReplacementPlugin(), new _webpack2['default'].NoErrorsPlugin()] : [])),\n  module: {\n    loaders: [WATCH ? Object.assign({}, JS_LOADER, {\n      query: {\n        // Wraps all React components into arbitrary transforms\n        // https://github.com/gaearon/babel-plugin-react-transform\n        plugins: ['react-transform'],\n        extra: {\n          'react-transform': {\n            transforms: [{\n              transform: 'react-transform-hmr',\n              imports: ['react'],\n              locals: ['module']\n            }, {\n              transform: 'react-transform-catch-errors',\n              imports: ['react', 'redbox-react']\n            }]\n          }\n        }\n      }\n    }) : JS_LOADER].concat(_toConsumableArray(config.module.loaders), [{\n      test: /\\.scss$/,\n      loaders: ['style-loader', 'css-loader', 'postcss-loader']\n    }])\n  }\n});\n\n// Configuration for server-side pre-rendering bundle\nvar pagesConfig = (0, _lodashMerge2['default'])({}, config, {\n  entry: './app.js',\n  output: {\n    filename: 'app.node.js',\n    libraryTarget: 'commonjs2'\n  },\n  target: 'node',\n  node: {\n    console: false,\n    global: false,\n    process: false,\n    Buffer: false,\n    __filename: false,\n    __dirname: false\n  },\n  externals: /^[a-z][a-z\\.\\-\\/0-9]*$/i,\n  plugins: config.plugins.concat([new _webpack2['default'].optimize.LimitChunkCountPlugin({ maxChunks: 1 })]),\n  module: {\n    loaders: [JS_LOADER].concat(_toConsumableArray(config.module.loaders), [{\n      test: /\\.scss$/,\n      loaders: ['css-loader', 'postcss-loader']\n    }])\n  }\n});\n\nexports['default'] = [appConfig, pagesConfig];\nmodule.exports = exports['default'];\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZXNwZXIuay52aW5kL3Byb2plY3RzL3BsYXlncm91bmQvcmVhY3Rqcy9yZWFjdC1zdGF0aWMvdG9vbHMvd2VicGFjay5jb25maWcuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztvQkFNaUIsTUFBTTs7Ozt1QkFDSCxTQUFTOzs7OzJCQUNYLGNBQWM7Ozs7QUFFaEMsSUFBTSxLQUFLLEdBQUcsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsQ0FBQztBQUNoRCxJQUFNLE9BQU8sR0FBRyxPQUFPLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsQ0FBQztBQUNqRCxJQUFNLEtBQUssR0FBRyxNQUFNLENBQUMsS0FBSyxDQUFDO0FBQzNCLElBQU0scUJBQXFCLEdBQUcsQ0FDNUIsYUFBYSxFQUNiLGNBQWMsRUFDZCxjQUFjLEVBQ2QsZUFBZSxFQUNmLGVBQWUsRUFDZixVQUFVLEVBQ1YsYUFBYSxFQUNiLGVBQWUsQ0FDaEIsQ0FBQztBQUNGLElBQU0sU0FBUyxHQUFHO0FBQ2hCLE1BQUksRUFBRSxTQUFTO0FBQ2YsU0FBTyxFQUFFLENBQ1Asa0JBQUssT0FBTyxDQUFDLFNBQVMsRUFBRSxlQUFlLENBQUMsRUFDeEMsa0JBQUssT0FBTyxDQUFDLFNBQVMsRUFBRSxTQUFTLENBQUMsRUFDbEMsa0JBQUssT0FBTyxDQUFDLFNBQVMsRUFBRSxVQUFVLENBQUMsRUFDbkMsa0JBQUssT0FBTyxDQUFDLFNBQVMsRUFBRSxXQUFXLENBQUMsRUFDcEMsa0JBQUssT0FBTyxDQUFDLFNBQVMsRUFBRSxjQUFjLENBQUMsQ0FDeEM7QUFDRCxRQUFNLEVBQUUsY0FBYztDQUN2QixDQUFDOzs7QUFJRixJQUFNLE1BQU0sR0FBRztBQUNiLFFBQU0sRUFBRTtBQUNOLFFBQUksRUFBRSxrQkFBSyxJQUFJLENBQUMsU0FBUyxFQUFFLFVBQVUsQ0FBQztBQUN0QyxjQUFVLEVBQUUsR0FBRztB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ImZpbGUiOiIvVXNlcnMvamVzcGVyLmsudmluZC9wcm9qZWN0cy9wbGF5Z3JvdW5kL3JlYWN0anMvcmVhY3Qtc3RhdGljL3Rvb2xzL3dlYnBhY2suY29uZmlnLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBSZWFjdCBTdGF0aWMgQm9pbGVycGxhdGVcbiAqIGh0dHBzOi8vZ2l0aHViLmNvbS9rb2lzdHlhL3JlYWN0LXN0YXRpYy1ib2lsZXJwbGF0ZVxuICogQ29weXJpZ2h0IChjKSBLb25zdGFudGluIFRhcmt1cyAoQGtvaXN0eWEpIHwgTUlUIGxpY2Vuc2VcbiAqL1xuXG5pbXBvcnQgcGF0aCBmcm9tICdwYXRoJztcbmltcG9ydCB3ZWJwYWNrIGZyb20gJ3dlYnBhY2snO1xuaW1wb3J0IG1lcmdlIGZyb20gJ2xvZGFzaC5tZXJnZSc7XG5cbmNvbnN0IERFQlVHID0gIXByb2Nlc3MuYXJndi5pbmNsdWRlcygncmVsZWFzZScpO1xuY29uc3QgVkVSQk9TRSA9IHByb2Nlc3MuYXJndi5pbmNsdWRlcygndmVyYm9zZScpO1xuY29uc3QgV0FUQ0ggPSBnbG9iYWwud2F0Y2g7XG5jb25zdCBBVVRPUFJFRklYRVJfQlJPV1NFUlMgPSBbXG4gICdBbmRyb2lkIDIuMycsXG4gICdBbmRyb2lkID49IDQnLFxuICAnQ2hyb21lID49IDM1JyxcbiAgJ0ZpcmVmb3ggPj0gMzEnLFxuICAnRXhwbG9yZXIgPj0gOScsXG4gICdpT1MgPj0gNycsXG4gICdPcGVyYSA+PSAxMicsXG4gICdTYWZhcmkgPj0gNy4xJyxcbl07XG5jb25zdCBKU19MT0FERVIgPSB7XG4gIHRlc3Q6IC9cXC5qc3g/JC8sXG4gIGluY2x1ZGU6IFtcbiAgICBwYXRoLnJlc29sdmUoX19kaXJuYW1lLCAnLi4vY29tcG9uZW50cycpLFxuICAgIHBhdGgucmVzb2x2ZShfX2Rpcm5hbWUsICcuLi9jb3JlJyksXG4gICAgcGF0aC5yZXNvbHZlKF9fZGlybmFtZSwgJy4uL3BhZ2VzJyksXG4gICAgcGF0aC5yZXNvbHZlKF9fZGlybmFtZSwgJy4uL2FwcC5qcycpLFxuICAgIHBhdGgucmVzb2x2ZShfX2Rpcm5hbWUsICcuLi9jb25maWcuanMnKSxcbiAgXSxcbiAgbG9hZGVyOiAnYmFiZWwtbG9hZGVyJyxcbn07XG5cblxuLy8gQmFzZSBjb25maWd1cmF0aW9uXG5jb25zdCBjb25maWcgPSB7XG4gIG91dHB1dDoge1xuICAgIHBhdGg6IHBhdGguam9pbihfX2Rpcm5hbWUsICcuLi9idWlsZCcpLFxuICAgIHB1YmxpY1BhdGg6ICcvJyxcbiAgICBzb3VyY2VQcmVmaXg6ICcgICcsXG4gIH0sXG4gIGNhY2hlOiBmYWxzZSxcbiAgZGVidWc6IERFQlVHLFxuICBzdGF0czoge1xuICAgIGNvbG9yczogdHJ1ZSxcbiAgICByZWFzb25zOiBERUJVRyxcbiAgICBoYXNoOiBWRVJCT1NFLFxuICAgIHZlcnNpb246IFZFUkJPU0UsXG4gICAgdGltaW5nczogdHJ1ZSxcbiAgICBjaHVua3M6IFZFUkJPU0UsXG4gICAgY2h1bmtNb2R1bGVzOiBWRVJCT1NFLFxuICAgIGNhY2hlZDogVkVSQk9TRSxcbiAgICBjYWNoZWRBc3NldHM6IFZFUkJPU0UsXG4gIH0sXG4gIHBsdWdpbnM6IFtcbiAgICBuZXcgd2VicGFjay5vcHRpbWl6ZS5PY2N1cmVuY2VPcmRlclBsdWdpbigpLFxuICAgIG5ldyB3ZWJwYWNrLkRlZmluZVBsdWdpbih7XG4gICAgICAncHJvY2Vzcy5lbnYuTk9ERV9FTlYnOiBERUJVRyA/ICdcImRldmVsb3BtZW50XCInIDogJ1wicHJvZHVjdGlvblwiJyxcbiAgICAgICdfX0RFVl9fJzogREVCVUcsXG4gICAgfSksXG4gIF0sXG4gIG1vZHVsZToge1xuICAgIGxvYWRlcnM6IFtcbiAgICAgIHtcbiAgICAgICAgdGVzdDogL1tcXFxcXFwvXWFwcFxcLmpzJC8sXG4gICAgICAgIGxvYWRlcjogcGF0aC5qb2luKF9fZGlybmFtZSwgJy4vbGliL3JvdXRlcy1sb2FkZXIuanMnKSxcbiAgICAgIH0sIHtcbiAgICAgICAgdGVzdDogL1xcLmpzb24kLyxcbiAgICAgICAgbG9hZGVyOiAnanNvbi1sb2FkZXInLFxuICAgICAgfSwge1xuICAgICAgICB0ZXN0OiAvXFwudHh0JC8sXG4gICAgICAgIGxvYWRlcjogJ3Jhdy1sb2FkZXInLFxuICAgICAgfSwge1xuICAgICAgICB0ZXN0OiAvXFwuKHBuZ3xqcGd8anBlZ3xnaWZ8c3ZnfHdvZmZ8d29mZjIpJC8sXG4gICAgICAgIGxvYWRlcjogJ3VybC1sb2FkZXI/bGltaXQ9MTAwMDAnLFxuICAgICAgfSwge1xuICAgICAgICB0ZXN0OiAvXFwuKGVvdHx0dGZ8d2F2fG1wMykkLyxcbiAgICAgICAgbG9hZGVyOiAnZmlsZS1sb2FkZXInLFxuICAgICAgfSxcbiAgICBdLFxuICB9LFxuICBwb3N0Y3NzOiBmdW5jdGlvbiBwbHVnaW5zKGJ1bmRsZXIpIHtcbiAgICByZXR1cm4gW1xuICAgICAgcmVxdWlyZSgncG9zdGNzcy1pbXBvcnQnKSh7IGFkZERlcGVuZGVuY3lUbzogYnVuZGxlciB9KSxcbiAgICAgIHJlcXVpcmUoJ3ByZWNzcycpKCksXG4gICAgICByZXF1aXJlKCdhdXRvcHJlZml4ZXInKSh7XG4gICAgICAgIGJyb3dzZXJzOiBBVVRPUFJFRklYRVJfQlJPV1NFUlMsXG4gICAgICB9KSxcbiAgICBdO1xuICB9LFxufTtcblxuLy8gQ29uZmlndXJhdGlvbiBmb3IgdGhlIGNsaWVudC1zaWRlIGJ1bmRsZVxuY29uc3QgYXBwQ29uZmlnID0gbWVyZ2Uoe30sIGNvbmZpZywge1xuICBlbnRyeTogW1xuICAgIC4uLihXQVRDSCA/IFsnd2VicGFjay1ob3QtbWlkZGxld2FyZS9jbGllbnQnXSA6IFtdKSxcbiAgICAnLi9hcHAuanMnLFxuICBdLFxuICBvdXRwdXQ6IHtcbiAgICBmaWxlbmFtZTogJ2FwcC5qcycsXG4gIH0sXG4gIC8vIGh0dHA6Ly93ZWJwYWNrLmdpdGh1Yi5pby9kb2NzL2NvbmZpZ3VyYXRpb24uaHRtbCNkZXZ0b29sXG4gIGRldnRvb2w6IERFQlVHID8gJ2NoZWFwLW1vZHVsZS1ldmFsLXNvdXJjZS1tYXAnIDogZmFsc2UsXG4gIHBsdWdpbnM6IFtcbiAgICAuLi5jb25maWcucGx1Z2lucyxcbiAgICAuLi4oREVCVUcgPyBbXSA6IFtcbiAgICAgIG5ldyB3ZWJwYWNrLm9wdGltaXplLkRlZHVwZVBsdWdpbigpLFxuICAgICAgbmV3IHdlYnBhY2sub3B0aW1pemUuVWdsaWZ5SnNQbHVnaW4oe1xuICAgICAgICBjb21wcmVzczoge1xuICAgICAgICAgIHdhcm5pbmdzOiBWRVJCT1NFLFxuICAgICAgICB9LFxuICAgICAgfSksXG4gICAgICBuZXcgd2VicGFjay5vcHRpbWl6ZS5BZ2dyZXNzaXZlTWVyZ2luZ1BsdWdpbigpLFxuICAgIF0pLFxuICAgIC4uLihXQVRDSCA/IFtcbiAgICAgIG5ldyB3ZWJwYWNrLkhvdE1vZHVsZVJlcGxhY2VtZW50UGx1Z2luKCksXG4gICAgICBuZXcgd2VicGFjay5Ob0Vycm9yc1BsdWdpbigpLFxuICAgIF0gOiBbXSksXG4gIF0sXG4gIG1vZHVsZToge1xuICAgIGxvYWRlcnM6IFtcbiAgICAgIFdBVENIID8gT2JqZWN0LmFzc2lnbih7fSwgSlNfTE9BREVSLCB7XG4gICAgICAgIHF1ZXJ5OiB7XG4gICAgICAgICAgLy8gV3JhcHMgYWxsIFJlYWN0IGNvbXBvbmVudHMgaW50byBhcmJpdHJhcnkgdHJhbnNmb3Jtc1xuICAgICAgICAgIC8vIGh0dHBzOi8vZ2l0aHViLmNvbS9nYWVhcm9uL2JhYmVsLXBsdWdpbi1yZWFjdC10cmFuc2Zvcm1cbiAgICAgICAgICBwbHVnaW5zOiBbJ3JlYWN0LXRyYW5zZm9ybSddLFxuICAgICAgICAgIGV4dHJhOiB7XG4gICAgICAgICAgICAncmVhY3QtdHJhbnNmb3JtJzoge1xuICAgICAgICAgICAgICB0cmFuc2Zvcm1zOiBbXG4gICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgdHJhbnNmb3JtOiAncmVhY3QtdHJhbnNmb3JtLWhtcicsXG4gICAgICAgICAgICAgICAgICBpbXBvcnRzOiBbJ3JlYWN0J10sXG4gICAgICAgICAgICAgICAgICBsb2NhbHM6IFsnbW9kdWxlJ10sXG4gICAgICAgICAgICAgICAgfSwge1xuICAgICAgICAgICAgICAgICAgdHJhbnNmb3JtOiAncmVhY3QtdHJhbnNmb3JtLWNhdGNoLWVycm9ycycsXG4gICAgICAgICAgICAgICAgICBpbXBvcnRzOiBbJ3JlYWN0JywgJ3JlZGJveC1yZWFjdCddLFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgIF0sXG4gICAgICAgICAgICB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICB9KSA6IEpTX0xPQURFUixcbiAgICAgIC4uLmNvbmZpZy5tb2R1bGUubG9hZGVycyxcbiAgICAgIHtcbiAgICAgICAgdGVzdDogL1xcLnNjc3MkLyxcbiAgICAgICAgbG9hZGVyczogWydzdHlsZS1sb2FkZXInLCAnY3NzLWxvYWRlcicsICdwb3N0Y3NzLWxvYWRlciddLFxuICAgICAgfSxcbiAgICBdLFxuICB9LFxufSk7XG5cbi8vIENvbmZpZ3VyYXRpb24gZm9yIHNlcnZlci1zaWRlIHByZS1yZW5kZXJpbmcgYnVuZGxlXG5jb25zdCBwYWdlc0NvbmZpZyA9IG1lcmdlKHt9LCBjb25maWcsIHtcbiAgZW50cnk6ICcuL2FwcC5qcycsXG4gIG91dHB1dDoge1xuICAgIGZpbGVuYW1lOiAnYXBwLm5vZGUuanMnLFxuICAgIGxpYnJhcnlUYXJnZXQ6ICdjb21tb25qczInLFxuICB9LFxuICB0YXJnZXQ6ICdub2RlJyxcbiAgbm9kZToge1xuICAgIGNvbnNvbGU6IGZhbHNlLFxuICAgIGdsb2JhbDogZmFsc2UsXG4gICAgcHJvY2VzczogZmFsc2UsXG4gICAgQnVmZmVyOiBmYWxzZSxcbiAgICBfX2ZpbGVuYW1lOiBmYWxzZSxcbiAgICBfX2Rpcm5hbWU6IGZhbHNlLFxuICB9LFxuICBleHRlcm5hbHM6IC9eW2Etel1bYS16XFwuXFwtXFwvMC05XSokL2ksXG4gIHBsdWdpbnM6IGNvbmZpZy5wbHVnaW5zLmNvbmNhdChbXG4gICAgbmV3IHdlYnBhY2sub3B0aW1pemUuTGltaXRDaHVua0NvdW50UGx1Z2luKHsgbWF4Q2h1bmtzOiAxIH0pLFxuICBdKSxcbiAgbW9kdWxlOiB7XG4gICAgbG9hZGVyczogW1xuICAgICAgSlNfTE9BREVSLFxuICAgICAgLi4uY29uZmlnLm1vZHVsZS5sb2FkZXJzLFxuICAgICAge1xuICAgICAgICB0ZXN0OiAvXFwuc2NzcyQvLFxuICAgICAgICBsb2FkZXJzOiBbJ2Nzcy1sb2FkZXInLCAncG9zdGNzcy1sb2FkZXInXSxcbiAgICAgIH0sXG4gICAgXSxcbiAgfSxcbn0pO1xuXG5leHBvcnQgZGVmYXVsdCBbYXBwQ29uZmlnLCBwYWdlc0NvbmZpZ107XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/webpack.config.js"
+      ],
+      "names": [],
+      "mappings": "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",
+      "file": "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/webpack.config.js",
+      "sourcesContent": [
+        "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\nimport path from 'path';\nimport webpack from 'webpack';\nimport merge from 'lodash.merge';\n\nconst DEBUG = !process.argv.includes('release');\nconst VERBOSE = process.argv.includes('verbose');\nconst WATCH = global.watch;\nconst AUTOPREFIXER_BROWSERS = [\n  'Android 2.3',\n  'Android >= 4',\n  'Chrome >= 35',\n  'Firefox >= 31',\n  'Explorer >= 9',\n  'iOS >= 7',\n  'Opera >= 12',\n  'Safari >= 7.1',\n];\nconst JS_LOADER = {\n  test: /\\.jsx?$/,\n  include: [\n    path.resolve(__dirname, '../components'),\n    path.resolve(__dirname, '../core'),\n    path.resolve(__dirname, '../pages'),\n    path.resolve(__dirname, '../app.js'),\n    path.resolve(__dirname, '../config.js'),\n  ],\n  loader: 'babel-loader',\n};\n\n\n// Base configuration\nconst config = {\n  output: {\n    path: path.join(__dirname, '../build'),\n    publicPath: '/',\n    sourcePrefix: '  ',\n  },\n  cache: false,\n  debug: DEBUG,\n  stats: {\n    colors: true,\n    reasons: DEBUG,\n    hash: VERBOSE,\n    version: VERBOSE,\n    timings: true,\n    chunks: VERBOSE,\n    chunkModules: VERBOSE,\n    cached: VERBOSE,\n    cachedAssets: VERBOSE,\n  },\n  plugins: [\n    new webpack.optimize.OccurenceOrderPlugin(),\n    new webpack.DefinePlugin({\n      'process.env.NODE_ENV': DEBUG ? '\"development\"' : '\"production\"',\n      '__DEV__': DEBUG,\n    }),\n  ],\n  module: {\n    loaders: [\n      {\n        test: /[\\\\\\/]app\\.js$/,\n        loader: path.join(__dirname, './lib/routes-loader.js'),\n      }, {\n        test: /\\.json$/,\n        loader: 'json-loader',\n      }, {\n        test: /\\.txt$/,\n        loader: 'raw-loader',\n      }, {\n        test: /\\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,\n        loader: 'url-loader?limit=10000',\n      }, {\n        test: /\\.(eot|ttf|wav|mp3)$/,\n        loader: 'file-loader',\n      },\n    ],\n  },\n  postcss: function plugins(bundler) {\n    return [\n      require('postcss-import')({ addDependencyTo: bundler }),\n      require('precss')(),\n      require('autoprefixer')({\n        browsers: AUTOPREFIXER_BROWSERS,\n      }),\n    ];\n  },\n};\n\n// Configuration for the client-side bundle\nconst appConfig = merge({}, config, {\n  entry: [\n    ...(WATCH ? ['webpack-hot-middleware/client'] : []),\n    './app.js',\n  ],\n  output: {\n    filename: 'app.js',\n  },\n  // http://webpack.github.io/docs/configuration.html#devtool\n  devtool: DEBUG ? 'cheap-module-eval-source-map' : false,\n  plugins: [\n    ...config.plugins,\n    ...(DEBUG ? [] : [\n      new webpack.optimize.DedupePlugin(),\n      new webpack.optimize.UglifyJsPlugin({\n        compress: {\n          warnings: VERBOSE,\n        },\n      }),\n      new webpack.optimize.AggressiveMergingPlugin(),\n    ]),\n    ...(WATCH ? [\n      new webpack.HotModuleReplacementPlugin(),\n      new webpack.NoErrorsPlugin(),\n    ] : []),\n  ],\n  module: {\n    loaders: [\n      WATCH ? Object.assign({}, JS_LOADER, {\n        query: {\n          // Wraps all React components into arbitrary transforms\n          // https://github.com/gaearon/babel-plugin-react-transform\n          plugins: ['react-transform'],\n          extra: {\n            'react-transform': {\n              transforms: [\n                {\n                  transform: 'react-transform-hmr',\n                  imports: ['react'],\n                  locals: ['module'],\n                }, {\n                  transform: 'react-transform-catch-errors',\n                  imports: ['react', 'redbox-react'],\n                },\n              ],\n            },\n          },\n        },\n      }) : JS_LOADER,\n      ...config.module.loaders,\n      {\n        test: /\\.scss$/,\n        loaders: ['style-loader', 'css-loader', 'postcss-loader'],\n      },\n    ],\n  },\n});\n\n// Configuration for server-side pre-rendering bundle\nconst pagesConfig = merge({}, config, {\n  entry: './app.js',\n  output: {\n    filename: 'app.node.js',\n    libraryTarget: 'commonjs2',\n  },\n  target: 'node',\n  node: {\n    console: false,\n    global: false,\n    process: false,\n    Buffer: false,\n    __filename: false,\n    __dirname: false,\n  },\n  externals: /^[a-z][a-z\\.\\-\\/0-9]*$/i,\n  plugins: config.plugins.concat([\n    new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),\n  ]),\n  module: {\n    loaders: [\n      JS_LOADER,\n      ...config.module.loaders,\n      {\n        test: /\\.scss$/,\n        loaders: ['css-loader', 'postcss-loader'],\n      },\n    ],\n  },\n});\n\nexport default [appConfig, pagesConfig];\n"
+      ]
+    },
+    "mtime": 1451222772000
+  },
+  "{\"filename\":\"/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/build.js\",\"extra\":{},\"env\":{},\"retainLines\":false,\"nonStandard\":true,\"experimental\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"stage\":0,\"blacklist\":[],\"optional\":[],\"modules\":\"common\",\"moduleIds\":false,\"jsxPragma\":\"React.createElement\",\"plugins\":[],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"keepModuleIdExtensions\":false,\"auxiliaryCommentAfter\":\"\",\"externalHelpers\":false,\"metadataUsedHelpers\":false,\"breakConfig\":false,\"sourceType\":\"module\"}:5.8.34": {
+    "metadata": {
+      "modules": {
+        "imports": [
+          {
+            "source": "./lib/task",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "task"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      },
+      "usedHelpers": [
+        "interop-require-default"
+      ]
+    },
+    "ignored": false,
+    "code": "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n'use strict';\n\nObject.defineProperty(exports, '__esModule', {\n  value: true\n});\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }\n\nvar _libTask = require('./lib/task');\n\nvar _libTask2 = _interopRequireDefault(_libTask);\n\nexports['default'] = (0, _libTask2['default'])(function build() {\n  return regeneratorRuntime.async(function build$(context$1$0) {\n    while (1) switch (context$1$0.prev = context$1$0.next) {\n      case 0:\n        context$1$0.next = 2;\n        return regeneratorRuntime.awrap(require('./clean')());\n\n      case 2:\n        context$1$0.next = 4;\n        return regeneratorRuntime.awrap(require('./copy')());\n\n      case 4:\n        context$1$0.next = 6;\n        return regeneratorRuntime.awrap(require('./bundle')());\n\n      case 6:\n        context$1$0.next = 8;\n        return regeneratorRuntime.awrap(require('./render')());\n\n      case 8:\n      case 'end':\n        return context$1$0.stop();\n    }\n  }, null, this);\n});\nmodule.exports = exports['default'];\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZXNwZXIuay52aW5kL3Byb2plY3RzL3BsYXlncm91bmQvcmVhY3Rqcy9yZWFjdC1zdGF0aWMvdG9vbHMvYnVpbGQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7dUJBTWlCLFlBQVk7Ozs7cUJBRWQsMEJBQUssU0FBZSxLQUFLOzs7Ozt3Q0FDaEMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxFQUFFOzs7O3dDQUNwQixPQUFPLENBQUMsUUFBUSxDQUFDLEVBQUU7Ozs7d0NBQ25CLE9BQU8sQ0FBQyxVQUFVLENBQUMsRUFBRTs7Ozt3Q0FDckIsT0FBTyxDQUFDLFVBQVUsQ0FBQyxFQUFFOzs7Ozs7O0NBQzVCLENBQUMiLCJmaWxlIjoiL1VzZXJzL2plc3Blci5rLnZpbmQvcHJvamVjdHMvcGxheWdyb3VuZC9yZWFjdGpzL3JlYWN0LXN0YXRpYy90b29scy9idWlsZC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogUmVhY3QgU3RhdGljIEJvaWxlcnBsYXRlXG4gKiBodHRwczovL2dpdGh1Yi5jb20va29pc3R5YS9yZWFjdC1zdGF0aWMtYm9pbGVycGxhdGVcbiAqIENvcHlyaWdodCAoYykgS29uc3RhbnRpbiBUYXJrdXMgKEBrb2lzdHlhKSB8IE1JVCBsaWNlbnNlXG4gKi9cblxuaW1wb3J0IHRhc2sgZnJvbSAnLi9saWIvdGFzayc7XG5cbmV4cG9ydCBkZWZhdWx0IHRhc2soYXN5bmMgZnVuY3Rpb24gYnVpbGQoKSB7XG4gIGF3YWl0IHJlcXVpcmUoJy4vY2xlYW4nKSgpO1xuICBhd2FpdCByZXF1aXJlKCcuL2NvcHknKSgpO1xuICBhd2FpdCByZXF1aXJlKCcuL2J1bmRsZScpKCk7XG4gIGF3YWl0IHJlcXVpcmUoJy4vcmVuZGVyJykoKTtcbn0pO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/build.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;uBAMiB,YAAY;;;;qBAEd,0BAAK,SAAe,KAAK;;;;;wCAChC,OAAO,CAAC,SAAS,CAAC,EAAE;;;;wCACpB,OAAO,CAAC,QAAQ,CAAC,EAAE;;;;wCACnB,OAAO,CAAC,UAAU,CAAC,EAAE;;;;wCACrB,OAAO,CAAC,UAAU,CAAC,EAAE;;;;;;;CAC5B,CAAC",
+      "file": "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/build.js",
+      "sourcesContent": [
+        "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\nimport task from './lib/task';\n\nexport default task(async function build() {\n  await require('./clean')();\n  await require('./copy')();\n  await require('./bundle')();\n  await require('./render')();\n});\n"
+      ]
+    },
+    "mtime": 1451222772000
+  },
+  "{\"filename\":\"/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/lib/task.js\",\"extra\":{},\"env\":{},\"retainLines\":false,\"nonStandard\":true,\"experimental\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"stage\":0,\"blacklist\":[],\"optional\":[],\"modules\":\"common\",\"moduleIds\":false,\"jsxPragma\":\"React.createElement\",\"plugins\":[],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"keepModuleIdExtensions\":false,\"auxiliaryCommentAfter\":\"\",\"externalHelpers\":false,\"metadataUsedHelpers\":false,\"breakConfig\":false,\"sourceType\":\"module\"}:5.8.34": {
+    "metadata": {
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      },
+      "usedHelpers": []
+    },
+    "ignored": false,
+    "code": "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n'use strict';\n\nObject.defineProperty(exports, '__esModule', {\n  value: true\n});\n\nvar _this = this;\n\nfunction format(time) {\n  return time.toTimeString().replace(/.*(\\d{2}:\\d{2}:\\d{2}).*/, '$1');\n}\n\nexports['default'] = function (fn) {\n  return function callee$1$0() {\n    var start, end, time;\n    return regeneratorRuntime.async(function callee$1$0$(context$2$0) {\n      while (1) switch (context$2$0.prev = context$2$0.next) {\n        case 0:\n          start = new Date();\n\n          console.log('[' + format(start) + '] Starting \\'' + fn.name + '\\'...');\n          context$2$0.next = 4;\n          return regeneratorRuntime.awrap(fn());\n\n        case 4:\n          end = new Date();\n          time = end.getTime() - start.getTime();\n\n          console.log('[' + format(end) + '] Finished \\'' + fn.name + '\\' after ' + time + 'ms');\n\n        case 7:\n        case 'end':\n          return context$2$0.stop();\n      }\n    }, null, _this);\n  };\n};\n\nmodule.exports = exports['default'];\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZXNwZXIuay52aW5kL3Byb2plY3RzL3BsYXlncm91bmQvcmVhY3Rqcy9yZWFjdC1zdGF0aWMvdG9vbHMvbGliL3Rhc2suanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFNQSxTQUFTLE1BQU0sQ0FBQyxJQUFJLEVBQUU7QUFDcEIsU0FBTyxJQUFJLENBQUMsWUFBWSxFQUFFLENBQUMsT0FBTyxDQUFDLHlCQUF5QixFQUFFLElBQUksQ0FBQyxDQUFDO0NBQ3JFOztxQkFFYyxVQUFDLEVBQUU7U0FBSztRQUNmLEtBQUssRUFHTCxHQUFHLEVBQ0gsSUFBSTs7OztBQUpKLGVBQUssR0FBRyxJQUFJLElBQUksRUFBRTs7QUFDeEIsaUJBQU8sQ0FBQyxHQUFHLE9BQUssTUFBTSxDQUFDLEtBQUssQ0FBQyxxQkFBZSxFQUFFLENBQUMsSUFBSSxXQUFPLENBQUM7OzBDQUNyRCxFQUFFLEVBQUU7OztBQUNKLGFBQUcsR0FBRyxJQUFJLElBQUksRUFBRTtBQUNoQixjQUFJLEdBQUcsR0FBRyxDQUFDLE9BQU8sRUFBRSxHQUFHLEtBQUssQ0FBQyxPQUFPLEVBQUU7O0FBQzVDLGlCQUFPLENBQUMsR0FBRyxPQUFLLE1BQU0sQ0FBQyxHQUFHLENBQUMscUJBQWUsRUFBRSxDQUFDLElBQUksaUJBQVcsSUFBSSxRQUFLLENBQUM7Ozs7Ozs7R0FDdkU7Q0FBQSIsImZpbGUiOiIvVXNlcnMvamVzcGVyLmsudmluZC9wcm9qZWN0cy9wbGF5Z3JvdW5kL3JlYWN0anMvcmVhY3Qtc3RhdGljL3Rvb2xzL2xpYi90YXNrLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBSZWFjdCBTdGF0aWMgQm9pbGVycGxhdGVcbiAqIGh0dHBzOi8vZ2l0aHViLmNvbS9rb2lzdHlhL3JlYWN0LXN0YXRpYy1ib2lsZXJwbGF0ZVxuICogQ29weXJpZ2h0IChjKSBLb25zdGFudGluIFRhcmt1cyAoQGtvaXN0eWEpIHwgTUlUIGxpY2Vuc2VcbiAqL1xuXG5mdW5jdGlvbiBmb3JtYXQodGltZSkge1xuICByZXR1cm4gdGltZS50b1RpbWVTdHJpbmcoKS5yZXBsYWNlKC8uKihcXGR7Mn06XFxkezJ9OlxcZHsyfSkuKi8sICckMScpO1xufVxuXG5leHBvcnQgZGVmYXVsdCAoZm4pID0+IGFzeW5jICgpID0+IHtcbiAgY29uc3Qgc3RhcnQgPSBuZXcgRGF0ZSgpO1xuICBjb25zb2xlLmxvZyhgWyR7Zm9ybWF0KHN0YXJ0KX1dIFN0YXJ0aW5nICcke2ZuLm5hbWV9Jy4uLmApO1xuICBhd2FpdCBmbigpO1xuICBjb25zdCBlbmQgPSBuZXcgRGF0ZSgpO1xuICBjb25zdCB0aW1lID0gZW5kLmdldFRpbWUoKSAtIHN0YXJ0LmdldFRpbWUoKTtcbiAgY29uc29sZS5sb2coYFske2Zvcm1hdChlbmQpfV0gRmluaXNoZWQgJyR7Zm4ubmFtZX0nIGFmdGVyICR7dGltZX1tc2ApO1xufTtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/lib/task.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;AAMA,SAAS,MAAM,CAAC,IAAI,EAAE;AACpB,SAAO,IAAI,CAAC,YAAY,EAAE,CAAC,OAAO,CAAC,yBAAyB,EAAE,IAAI,CAAC,CAAC;CACrE;;qBAEc,UAAC,EAAE;SAAK;QACf,KAAK,EAGL,GAAG,EACH,IAAI;;;;AAJJ,eAAK,GAAG,IAAI,IAAI,EAAE;;AACxB,iBAAO,CAAC,GAAG,OAAK,MAAM,CAAC,KAAK,CAAC,qBAAe,EAAE,CAAC,IAAI,WAAO,CAAC;;0CACrD,EAAE,EAAE;;;AACJ,aAAG,GAAG,IAAI,IAAI,EAAE;AAChB,cAAI,GAAG,GAAG,CAAC,OAAO,EAAE,GAAG,KAAK,CAAC,OAAO,EAAE;;AAC5C,iBAAO,CAAC,GAAG,OAAK,MAAM,CAAC,GAAG,CAAC,qBAAe,EAAE,CAAC,IAAI,iBAAW,IAAI,QAAK,CAAC;;;;;;;GACvE;CAAA",
+      "file": "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/lib/task.js",
+      "sourcesContent": [
+        "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\nfunction format(time) {\n  return time.toTimeString().replace(/.*(\\d{2}:\\d{2}:\\d{2}).*/, '$1');\n}\n\nexport default (fn) => async () => {\n  const start = new Date();\n  console.log(`[${format(start)}] Starting '${fn.name}'...`);\n  await fn();\n  const end = new Date();\n  const time = end.getTime() - start.getTime();\n  console.log(`[${format(end)}] Finished '${fn.name}' after ${time}ms`);\n};\n"
+      ]
+    },
+    "mtime": 1451222772000
+  },
+  "{\"filename\":\"/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/clean.js\",\"extra\":{},\"env\":{},\"retainLines\":false,\"nonStandard\":true,\"experimental\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"stage\":0,\"blacklist\":[],\"optional\":[],\"modules\":\"common\",\"moduleIds\":false,\"jsxPragma\":\"React.createElement\",\"plugins\":[],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"keepModuleIdExtensions\":false,\"auxiliaryCommentAfter\":\"\",\"externalHelpers\":false,\"metadataUsedHelpers\":false,\"breakConfig\":false,\"sourceType\":\"module\"}:5.8.34": {
+    "metadata": {
+      "modules": {
+        "imports": [
+          {
+            "source": "del",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "del"
+              }
+            ]
+          },
+          {
+            "source": "./lib/task",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "task"
+              }
+            ]
+          },
+          {
+            "source": "./lib/fs",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fs"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      },
+      "usedHelpers": [
+        "interop-require-default"
+      ]
+    },
+    "ignored": false,
+    "code": "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n'use strict';\n\nObject.defineProperty(exports, '__esModule', {\n  value: true\n});\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }\n\nvar _del = require('del');\n\nvar _del2 = _interopRequireDefault(_del);\n\nvar _libTask = require('./lib/task');\n\nvar _libTask2 = _interopRequireDefault(_libTask);\n\nvar _libFs = require('./lib/fs');\n\nvar _libFs2 = _interopRequireDefault(_libFs);\n\nexports['default'] = (0, _libTask2['default'])(function clean() {\n  return regeneratorRuntime.async(function clean$(context$1$0) {\n    while (1) switch (context$1$0.prev = context$1$0.next) {\n      case 0:\n        context$1$0.next = 2;\n        return regeneratorRuntime.awrap((0, _del2['default'])(['build/*', '!build/.git'], { dot: true }));\n\n      case 2:\n        context$1$0.next = 4;\n        return regeneratorRuntime.awrap(_libFs2['default'].mkdir('build'));\n\n      case 4:\n      case 'end':\n        return context$1$0.stop();\n    }\n  }, null, this);\n});\nmodule.exports = exports['default'];\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZXNwZXIuay52aW5kL3Byb2plY3RzL3BsYXlncm91bmQvcmVhY3Rqcy9yZWFjdC1zdGF0aWMvdG9vbHMvY2xlYW4uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7bUJBTWdCLEtBQUs7Ozs7dUJBQ0osWUFBWTs7OztxQkFDZCxVQUFVOzs7O3FCQUVWLDBCQUFLLFNBQWUsS0FBSzs7Ozs7d0NBQ2hDLHNCQUFJLENBQUMsU0FBUyxFQUFFLGFBQWEsQ0FBQyxFQUFFLEVBQUUsR0FBRyxFQUFFLElBQUksRUFBRSxDQUFDOzs7O3dDQUM5QyxtQkFBRyxLQUFLLENBQUMsT0FBTyxDQUFDOzs7Ozs7O0NBQ3hCLENBQUMiLCJmaWxlIjoiL1VzZXJzL2plc3Blci5rLnZpbmQvcHJvamVjdHMvcGxheWdyb3VuZC9yZWFjdGpzL3JlYWN0LXN0YXRpYy90b29scy9jbGVhbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogUmVhY3QgU3RhdGljIEJvaWxlcnBsYXRlXG4gKiBodHRwczovL2dpdGh1Yi5jb20va29pc3R5YS9yZWFjdC1zdGF0aWMtYm9pbGVycGxhdGVcbiAqIENvcHlyaWdodCAoYykgS29uc3RhbnRpbiBUYXJrdXMgKEBrb2lzdHlhKSB8IE1JVCBsaWNlbnNlXG4gKi9cblxuaW1wb3J0IGRlbCBmcm9tICdkZWwnO1xuaW1wb3J0IHRhc2sgZnJvbSAnLi9saWIvdGFzayc7XG5pbXBvcnQgZnMgZnJvbSAnLi9saWIvZnMnO1xuXG5leHBvcnQgZGVmYXVsdCB0YXNrKGFzeW5jIGZ1bmN0aW9uIGNsZWFuKCkge1xuICBhd2FpdCBkZWwoWydidWlsZC8qJywgJyFidWlsZC8uZ2l0J10sIHsgZG90OiB0cnVlIH0pO1xuICBhd2FpdCBmcy5ta2RpcignYnVpbGQnKTtcbn0pO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/clean.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;mBAMgB,KAAK;;;;uBACJ,YAAY;;;;qBACd,UAAU;;;;qBAEV,0BAAK,SAAe,KAAK;;;;;wCAChC,sBAAI,CAAC,SAAS,EAAE,aAAa,CAAC,EAAE,EAAE,GAAG,EAAE,IAAI,EAAE,CAAC;;;;wCAC9C,mBAAG,KAAK,CAAC,OAAO,CAAC;;;;;;;CACxB,CAAC",
+      "file": "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/clean.js",
+      "sourcesContent": [
+        "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\nimport del from 'del';\nimport task from './lib/task';\nimport fs from './lib/fs';\n\nexport default task(async function clean() {\n  await del(['build/*', '!build/.git'], { dot: true });\n  await fs.mkdir('build');\n});\n"
+      ]
+    },
+    "mtime": 1451222772000
+  },
+  "{\"filename\":\"/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/lib/fs.js\",\"extra\":{},\"env\":{},\"retainLines\":false,\"nonStandard\":true,\"experimental\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"stage\":0,\"blacklist\":[],\"optional\":[],\"modules\":\"common\",\"moduleIds\":false,\"jsxPragma\":\"React.createElement\",\"plugins\":[],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"keepModuleIdExtensions\":false,\"auxiliaryCommentAfter\":\"\",\"externalHelpers\":false,\"metadataUsedHelpers\":false,\"breakConfig\":false,\"sourceType\":\"module\"}:5.8.34": {
+    "metadata": {
+      "modules": {
+        "imports": [
+          {
+            "source": "fs",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fs"
+              }
+            ]
+          },
+          {
+            "source": "mkdirp",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "mkdirp"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      },
+      "usedHelpers": [
+        "interop-require-default"
+      ]
+    },
+    "ignored": false,
+    "code": "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\n'use strict';\n\nObject.defineProperty(exports, '__esModule', {\n  value: true\n});\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }\n\nvar _fs = require('fs');\n\nvar _fs2 = _interopRequireDefault(_fs);\n\nvar _mkdirp = require('mkdirp');\n\nvar _mkdirp2 = _interopRequireDefault(_mkdirp);\n\nvar writeFile = function writeFile(filename, contents) {\n  return new Promise(function (resolve, reject) {\n    _fs2['default'].writeFile(filename, contents, 'utf8', function (err) {\n      return err ? reject(err) : resolve();\n    });\n  });\n};\n\nvar mkdir = function mkdir(name) {\n  return new Promise(function (resolve, reject) {\n    (0, _mkdirp2['default'])(name, function (err) {\n      return err ? reject(err) : resolve();\n    });\n  });\n};\n\nexports['default'] = { writeFile: writeFile, mkdir: mkdir };\nmodule.exports = exports['default'];\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZXNwZXIuay52aW5kL3Byb2plY3RzL3BsYXlncm91bmQvcmVhY3Rqcy9yZWFjdC1zdGF0aWMvdG9vbHMvbGliL2ZzLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7O2tCQU1lLElBQUk7Ozs7c0JBQ0EsUUFBUTs7OztBQUUzQixJQUFNLFNBQVMsR0FBRyxTQUFaLFNBQVMsQ0FBSSxRQUFRLEVBQUUsUUFBUTtTQUFLLElBQUksT0FBTyxDQUFDLFVBQUMsT0FBTyxFQUFFLE1BQU0sRUFBSztBQUN6RSxvQkFBRyxTQUFTLENBQUMsUUFBUSxFQUFFLFFBQVEsRUFBRSxNQUFNLEVBQUUsVUFBQSxHQUFHO2FBQzFDLEdBQUcsR0FBRyxNQUFNLENBQUMsR0FBRyxDQUFDLEdBQUcsT0FBTyxFQUFFO0tBQUEsQ0FBQyxDQUFDO0dBQ2xDLENBQUM7Q0FBQSxDQUFDOztBQUVILElBQU0sS0FBSyxHQUFHLFNBQVIsS0FBSyxDQUFJLElBQUk7U0FBSyxJQUFJLE9BQU8sQ0FBQyxVQUFDLE9BQU8sRUFBRSxNQUFNLEVBQUs7QUFDdkQsNkJBQU8sSUFBSSxFQUFFLFVBQUEsR0FBRzthQUFJLEdBQUcsR0FBRyxNQUFNLENBQUMsR0FBRyxDQUFDLEdBQUcsT0FBTyxFQUFFO0tBQUEsQ0FBQyxDQUFDO0dBQ3BELENBQUM7Q0FBQSxDQUFDOztxQkFFWSxFQUFFLFNBQVMsRUFBVCxTQUFTLEVBQUUsS0FBSyxFQUFMLEtBQUssRUFBRSIsImZpbGUiOiIvVXNlcnMvamVzcGVyLmsudmluZC9wcm9qZWN0cy9wbGF5Z3JvdW5kL3JlYWN0anMvcmVhY3Qtc3RhdGljL3Rvb2xzL2xpYi9mcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogUmVhY3QgU3RhdGljIEJvaWxlcnBsYXRlXG4gKiBodHRwczovL2dpdGh1Yi5jb20va29pc3R5YS9yZWFjdC1zdGF0aWMtYm9pbGVycGxhdGVcbiAqIENvcHlyaWdodCAoYykgS29uc3RhbnRpbiBUYXJrdXMgKEBrb2lzdHlhKSB8IE1JVCBsaWNlbnNlXG4gKi9cblxuaW1wb3J0IGZzIGZyb20gJ2ZzJztcbmltcG9ydCBta2RpcnAgZnJvbSAnbWtkaXJwJztcblxuY29uc3Qgd3JpdGVGaWxlID0gKGZpbGVuYW1lLCBjb250ZW50cykgPT4gbmV3IFByb21pc2UoKHJlc29sdmUsIHJlamVjdCkgPT4ge1xuICBmcy53cml0ZUZpbGUoZmlsZW5hbWUsIGNvbnRlbnRzLCAndXRmOCcsIGVyciA9PlxuICAgIGVyciA/IHJlamVjdChlcnIpIDogcmVzb2x2ZSgpKTtcbn0pO1xuXG5jb25zdCBta2RpciA9IChuYW1lKSA9PiBuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG4gIG1rZGlycChuYW1lLCBlcnIgPT4gZXJyID8gcmVqZWN0KGVycikgOiByZXNvbHZlKCkpO1xufSk7XG5cbmV4cG9ydCBkZWZhdWx0IHsgd3JpdGVGaWxlLCBta2RpciB9O1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/lib/fs.js"
+      ],
+      "names": [],
+      "mappings": ";;;;;;;;;;;;;;kBAMe,IAAI;;;;sBACA,QAAQ;;;;AAE3B,IAAM,SAAS,GAAG,SAAZ,SAAS,CAAI,QAAQ,EAAE,QAAQ;SAAK,IAAI,OAAO,CAAC,UAAC,OAAO,EAAE,MAAM,EAAK;AACzE,oBAAG,SAAS,CAAC,QAAQ,EAAE,QAAQ,EAAE,MAAM,EAAE,UAAA,GAAG;aAC1C,GAAG,GAAG,MAAM,CAAC,GAAG,CAAC,GAAG,OAAO,EAAE;KAAA,CAAC,CAAC;GAClC,CAAC;CAAA,CAAC;;AAEH,IAAM,KAAK,GAAG,SAAR,KAAK,CAAI,IAAI;SAAK,IAAI,OAAO,CAAC,UAAC,OAAO,EAAE,MAAM,EAAK;AACvD,6BAAO,IAAI,EAAE,UAAA,GAAG;aAAI,GAAG,GAAG,MAAM,CAAC,GAAG,CAAC,GAAG,OAAO,EAAE;KAAA,CAAC,CAAC;GACpD,CAAC;CAAA,CAAC;;qBAEY,EAAE,SAAS,EAAT,SAAS,EAAE,KAAK,EAAL,KAAK,EAAE",
+      "file": "/Users/jesper.k.vind/projects/playground/reactjs/react-static/tools/lib/fs.js",
+      "sourcesContent": [
+        "/**\n * React Static Boilerplate\n * https://github.com/koistya/react-static-boilerplate\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\n */\n\nimport fs from 'fs';\nimport mkdirp from 'mkdirp';\n\nconst writeFile = (filename, contents) => new Promise((resolve, reject) => {\n  fs.writeFile(filename, contents, 'utf8', err =>\n    err ? reject(err) : resolve());\n});\n\nconst mkdir = (name) => new Promise((resolve, reject) => {\n  mkdirp(name, err => err ? reject(err) : resolve());\n});\n\nexport default { writeFile, mkdir };\n"
+      ]
+    },
+    "mtime": 1451222772000
+  }
+}

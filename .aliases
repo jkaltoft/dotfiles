@@ -1,0 +1,13 @@
+# ------------------------------------------------------------------------------
+# ALIASES
+# ------------------------------------------------------------------------------
+
+# Preferred 'ls' implementation
+alias ll='ls -FGlAhp'
+
+# Hide/show hidden files in Finder
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO;  killall Finder /System/Library/CoreServices/Finder.app'
+
+# Yarn https://yarnpkg.com/ (alternative to npm)
+alias yarn="~/.yarn/bin/yarn.js"

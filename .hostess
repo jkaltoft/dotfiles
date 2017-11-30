@@ -1,0 +1,140 @@
+function host-131(){
+  host-withip 172.24.27.131
+}
+
+function host-dev152(){
+  host-set 152
+}
+
+function host-local(){
+  sudo hostess del epn.dk
+  sudo hostess del feeds.jp.dk
+  sudo hostess del finans.dk
+  sudo hostess del fpn.dk
+  sudo hostess del jp.dk
+  sudo hostess del jyllands-posten.dk
+  sudo hostess del tablet.jyllands-posten.dk
+  sudo hostess del www.finans.dk
+  sudo hostess del www.jp.dk
+  sudo hostess del www.jyllands-posten.dk
+
+  sudo hostess add amwatch.dk 127.0.0.1
+  sudo hostess add advokatwatch.dk 127.0.0.1
+  sudo hostess add content.watchmedier.dk 127.0.0.1
+  sudo hostess add ejendomswatch.dk 127.0.0.1
+  sudo hostess add energiwatch.dk 127.0.0.1
+  sudo hostess add energywatch.eu 127.0.0.1
+  sudo hostess add finanswatch.dk 127.0.0.1
+  sudo hostess add fodevarewatch.dk 127.0.0.1
+  sudo hostess add itwatch.dk 127.0.0.1
+  sudo hostess add m.finanswatch.dk 127.0.0.1
+  sudo hostess add mediawatch.dk 127.0.0.1
+  sudo hostess add medwatch.dk 127.0.0.1
+  sudo hostess add secure.amwatch.dk 127.0.0.1
+  sudo hostess add secure.advokatwatch.dk 127.0.0.1
+  sudo hostess add secure.ejendomswatch.dk 127.0.0.1
+  sudo hostess add secure.energiwatch.dk 127.0.0.1
+  sudo hostess add secure.energywatch.eu 127.0.0.1
+  sudo hostess add secure.finanswatch.dk 127.0.0.1
+  sudo hostess add secure.fodevarewatch.dk 127.0.0.1
+  sudo hostess add secure.itwatch.dk 127.0.0.1
+  sudo hostess add secure.mediawatch.dk 127.0.0.1
+  sudo hostess add secure.medwatch.dk 127.0.0.1
+  sudo hostess add secure.shippingwatch.com 127.0.0.1
+  sudo hostess add secure.shippingwatch.dk 127.0.0.1
+  sudo hostess add secure.watchmedier.dk 127.0.0.1
+  sudo hostess add shippingwatch.com 127.0.0.1
+  sudo hostess add shippingwatch.dk 127.0.0.1
+  sudo hostess add watchmedier.dk 127.0.0.1
+}
+
+function host-set(){
+  host-withip 172.24.27.$1
+}
+
+function host-staging(){
+  host-withip 91.214.22.101
+}
+
+function host-withip(){
+  ip=$1
+  sudo hostess add amwatch.dk $ip
+  sudo hostess add advokatwatch.dk $ip
+  sudo hostess add content.watchmedier.dk $ip
+  sudo hostess add ejendomswatch.dk $ip
+  sudo hostess add energiwatch.dk $ip
+  sudo hostess add energywatch.eu $ip
+  sudo hostess add epn.dk $ip
+  sudo hostess add feeds.jp.dk $ip
+  sudo hostess add finans.dk $ip
+  sudo hostess add finanswatch.dk $ip
+  sudo hostess add fodevarewatch.dk $ip
+  sudo hostess add fpn.dk $ip
+  sudo hostess add itwatch.dk $ip
+  sudo hostess add jp.dk $ip
+  sudo hostess add jyllands-posten.dk $ip
+  sudo hostess add m.finanswatch.dk $ip
+  sudo hostess add mediawatch.dk $ip
+  sudo hostess add medwatch.dk $ip
+  sudo hostess add secure.amwatch.dk $ip
+  sudo hostess add secure.advokatwatch.dk $ip
+  sudo hostess add secure.ejendomswatch.dk $ip
+  sudo hostess add secure.energiwatch.dk $ip
+  sudo hostess add secure.energywatch.eu $ip
+  sudo hostess add secure.finanswatch.dk $ip
+  sudo hostess add secure.fodevarewatch.dk $ip
+  sudo hostess add secure.itwatch.dk $ip
+  sudo hostess add secure.mediawatch.dk $ip
+  sudo hostess add secure.medwatch.dk $ip
+  sudo hostess add secure.shippingwatch.com $ip
+  sudo hostess add secure.shippingwatch.dk $ip
+  sudo hostess add secure.watchmedier.dk $ip
+  sudo hostess add shippingwatch.com $ip
+  sudo hostess add shippingwatch.dk $ip
+  sudo hostess add tablet.jyllands-posten.dk $ip
+  sudo hostess add watchmedier.dk $ip
+  sudo hostess add www.finans.dk $ip
+  sudo hostess add www.jp.dk $ip
+  sudo hostess add www.jyllands-posten.dk $ip
+}
+
+function host-production(){
+  sudo hostess del amwatch.dk
+  sudo hostess del advokatwatch.dk
+  sudo hostess del content.watchmedier.dk
+  sudo hostess del ejendomswatch.dk
+  sudo hostess del energiwatch.dk
+  sudo hostess del energywatch.eu
+  sudo hostess del epn.dk
+  sudo hostess del feeds.jp.dk
+  sudo hostess del finans.dk
+  sudo hostess del finanswatch.dk
+  sudo hostess del fodevarewatch.dk
+  sudo hostess del fpn.dk
+  sudo hostess del itwatch.dk
+  sudo hostess del jp.dk
+  sudo hostess del jyllands-posten.dk
+  sudo hostess del m.finanswatch.dk
+  sudo hostess del mediawatch.dk
+  sudo hostess del medwatch.dk
+  sudo hostess del secure.amwatch.dk
+  sudo hostess del secure.advokatwatch.dk
+  sudo hostess del secure.ejendomswatch.dk
+  sudo hostess del secure.energiwatch.dk
+  sudo hostess del secure.energywatch.eu
+  sudo hostess del secure.finanswatch.dk
+  sudo hostess del secure.fodevarewatch.dk
+  sudo hostess del secure.itwatch.dk
+  sudo hostess del secure.mediawatch.dk
+  sudo hostess del secure.medwatch.dk
+  sudo hostess del secure.shippingwatch.com
+  sudo hostess del secure.shippingwatch.dk
+  sudo hostess del secure.watchmedier.dk
+  sudo hostess del shippingwatch.com
+  sudo hostess del shippingwatch.dk
+  sudo hostess del tablet.jyllands-posten.dk
+  sudo hostess del watchmedier.dk
+  sudo hostess del www.finans.dk
+  sudo hostess del www.jp.dk
+  sudo hostess del www.jyllands-posten.dk
+}
