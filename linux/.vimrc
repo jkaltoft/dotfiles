@@ -1,6 +1,6 @@
 syntax enable
 set history=100
-colorscheme Monokai
+colorscheme monokai
 let mapleader = "\<Space>"
 filetype plugin indent on
 syntax on
