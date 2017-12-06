@@ -1,0 +1,23 @@
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Jesper Kaltoft Vind
+	email = git@jesperkaltoft.dk
+[core]
+	excludesfile = /Users/jesper.k.vind/.gitignore_global
+	autocrlf = input
+[push]
+	default = simple
+[color]
+	ui = true
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

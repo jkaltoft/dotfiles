@@ -10,9 +10,6 @@
     "files.trimTrailingWhitespace": true,
     "prettier.eslintIntegration": true,
     "prettier.tabWidth": 4,
-    "vscode_custom_css.imports": [
-        "/Volumes/Macintosh HD/Users/jesper.k.vind/dotfiles/.vscodestyles.css"
-    ],
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -23,5 +20,7 @@
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
-    "workbench.colorTheme": "Cobalt2"
+    "vscode_custom_css.imports": ["/home/jesper/dotfiles/.vscodestyles.css"],
+    "workbench.colorTheme": "Cobalt2",
+    "workbench.iconTheme": "material-icon-theme"
 }
