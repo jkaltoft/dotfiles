@@ -1,14 +1,15 @@
 {
     "editor.fontWeight": "400",
-    "editor.formatOnPaste": true,
-    // "editor.formatOnSave": true,
-    "editor.formatOnType": true,
     "editor.renderWhitespace": "all",
-    "editor.rulers": [80, 120],
+    "editor.rulers": [
+        80,
+        120
+    ],
     "editor.wordWrap": "off",
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "prettier.eslintIntegration": true,
+    "prettier.singleQuote": true,
     "prettier.tabWidth": 4,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
@@ -20,7 +21,10 @@
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
-    "vscode_custom_css.imports": ["/home/jesper/dotfiles/.vscodestyles.css"],
+    "vscode_custom_css.imports": [
+        "/home/jesper/dotfiles/.vscodestyles.css"
+    ],
     "workbench.colorTheme": "Cobalt2",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": 0
 }
