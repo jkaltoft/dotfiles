@@ -1,0 +1,7 @@
+[diff "sopsdiffer"]
+	textconv = sops -d
+[core]
+	editor = vim
+[user]
+	name = Jesper Kaltoft Vind
+	email = git@jesperkaltoft.dk
